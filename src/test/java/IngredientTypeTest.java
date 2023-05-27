@@ -17,15 +17,14 @@ public class IngredientTypeTest {
         this.name = name;
     }
 
-    //параметризациядля ингредиента: тип, имя
-    @Parameterized.Parameters()
+    @Parameterized.Parameters(name = "Тестовые данные: тип ингредиента - {0} Имя ингредиента - {1}")
     public static Object[][] getIngredientsData() {
         return new Object[][]{
-                {FILLING, "курица"},
-                {SAUCE, "цезарь"}
+                {FILLING, "FILLING"},
+                {SAUCE, "SAUCE"}
         };
     }
-    //тест для типа ингредиента
+
     @Test
     public void testIngredientTypeName() {
         assertEquals("Неверный тип ингредиента", name, testType.name());

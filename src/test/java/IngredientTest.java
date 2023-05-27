@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
@@ -8,6 +9,7 @@ import praktikum.IngredientType;
 import static praktikum.IngredientType.FILLING;
 import static praktikum.IngredientType.SAUCE;
 
+@RunWith(Parameterized.class)
 public class IngredientTest {
     private Ingredient ingredient;
     private IngredientType ingredientType;
