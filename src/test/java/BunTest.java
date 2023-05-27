@@ -20,6 +20,7 @@ public class BunTest {
         this.expectedBunName = expectedBunName;
         this.expectedBunPrice = expectedBunPrice;
     }
+    //параметризация для булочки: название, цена, ожидаемое название, ожидаемая цена
     @Parameterized.Parameters
     public static Object[][] bunTestData() {
         return new Object[][] {
@@ -33,12 +34,12 @@ public class BunTest {
     public void getNewBun() {
         bun = new Bun(bunName, bunPrice);
     }
-
+    //тест на сравнение имени булочки
     @Test
     public void getNameBunCorrect() {
         Assert.assertEquals("Неверное имя булочки", expectedBunName, bun.getName());
     }
-
+    //тест на сравнение цены булочки
     @Test
     public void getPriceBunCorrect() {
         Assert.assertEquals("Неверная цена булочки", expectedBunPrice, bun.getPrice(), 0.01 );
