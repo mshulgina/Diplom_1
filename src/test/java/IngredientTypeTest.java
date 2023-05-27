@@ -26,5 +26,8 @@ public class IngredientTypeTest {
         };
     }
     //тест для типа ингредиента
-
+    @Test
+    public void testIngredientTypeName() {
+        assertEquals("Неверный тип ингредиента", name, testType.name());
+    }
 }
