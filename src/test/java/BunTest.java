@@ -31,17 +31,19 @@ public class BunTest {
         };
     }
     @Before
-    public void getNewBun() {
+    public void createBurger() {
         bun = new Bun(bunName, bunPrice);
     }
+
     //тест на сравнение имени булочки
     @Test
-    public void getNameBunCorrect() {
+    public void getNameBunCorrectTest() {
         Assert.assertEquals("Неверное имя булочки", expectedBunName, bun.getName());
     }
     //тест на сравнение цены булочки
+
     @Test
-    public void getPriceBunCorrect() {
+    public void getPriceBunCorrectTest() {
         Assert.assertEquals("Неверная цена булочки", expectedBunPrice, bun.getPrice(), 0.01 );
     }
 
