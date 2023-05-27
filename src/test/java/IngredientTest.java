@@ -27,7 +27,7 @@ public class IngredientTest {
         this.expectedIngredientName = expectedIngredientName;
         this.expectedIngredientPrice = expectedIngredientPrice;
     }
-    //параметризация для ингридиентов: тип, имя, цена, ожидаемый тип, ожидаемое имя, ожидаемая цена
+    //параметризация для ингредиентов: тип, имя, цена, ожидаемый тип, ожидаемое имя, ожидаемая цена
     @Parameterized.Parameters
     public static Object[][] bunTestData() {
         return new Object[][] {
@@ -43,21 +43,21 @@ public class IngredientTest {
         ingredient = new Ingredient(ingredientType, ingredientName, ingredientPrice);
     }
 
-    //тест на получение типа ингридиента
+    //тест на получение типа ингредиента
     @Test
     public void getTypeCorrectTest() {
-        Assert.assertEquals("Неверный тип ингридиента", expectedIngredientType, ingredient.getType());
+        Assert.assertEquals("Неверный тип ингредиента", expectedIngredientType, ingredient.getType());
     }
 
-    //тест на получение имени ингридиента
+    //тест на получение имени ингредиента
     @Test
     public void getNameCorrectTest() {
-        Assert.assertEquals("Неверное имя ингридиента", expectedIngredientName, ingredient.getName());
+        Assert.assertEquals("Неверное имя ингредиента", expectedIngredientName, ingredient.getName());
     }
 
-    //тест на получение цены ингридиента
+    //тест на получение цены ингредиента
     @Test
     public void getPriceCorrectTest() {
-        Assert.assertEquals("Неверная цена ингридиента", expectedIngredientPrice, ingredient.getPrice(), 0.01);
+        Assert.assertEquals("Неверная цена ингредиента", expectedIngredientPrice, ingredient.getPrice(), 0.01);
     }
 }

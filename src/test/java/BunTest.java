@@ -35,13 +35,13 @@ public class BunTest {
         bun = new Bun(bunName, bunPrice);
     }
 
-    //тест на сравнение имени булочки
+    //тест на получение имени булочки
     @Test
     public void getNameBunCorrectTest() {
         Assert.assertEquals("Неверное имя булочки", expectedBunName, bun.getName());
     }
-    //тест на сравнение цены булочки
 
+    //тест на получение цены булочки
     @Test
     public void getPriceBunCorrectTest() {
         Assert.assertEquals("Неверная цена булочки", expectedBunPrice, bun.getPrice(), 0.01 );

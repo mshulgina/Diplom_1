@@ -29,25 +29,25 @@ public class BurgerTest {
         burger.setBuns(bun);
         assertEquals("Неверно добавлена булочка", bun, burger.bun);
     }
-    //тест на добавление ингридиента
+    //тест на добавление ингредиента
     @Test
     public void addIngredientTest() {
         burger.addIngredient(ingredient);
         List<Ingredient> expect = List.of(ingredient);
         List<Ingredient> actual = burger.ingredients;
 
-        assertEquals("Неверно добавлен ингридиент", expect, actual);
+        assertEquals("Неверно добавлен ингредиент", expect, actual);
     }
-    //тест на удаление ингридиента
+    //тест на удаление ингредиента
     @Test
     public void removeIngredientTest() {
         burger.addIngredient(ingredient);
         burger.removeIngredient(0);
         List<Ingredient> actual = burger.ingredients;
 
-        assertEquals("Неверно удален ингридиент", List.of(), actual);
+        assertEquals("Неверно удален ингредиент", List.of(), actual);
     }
-    //тест на перемещение ингридиента
+    //тест на перемещение ингредиента
     @Test
     public void moveIngredientTest() {
         burger.addIngredient(filling);
@@ -55,7 +55,7 @@ public class BurgerTest {
         burger.moveIngredient(0, 1);
         Ingredient actual = burger.ingredients.get(1);
 
-        assertEquals("Неверно перемещен ингридиент", filling, actual);
+        assertEquals("Неверно перемещен ингредиент", filling, actual);
     }
 
     //тест на установление цены
